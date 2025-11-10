@@ -1,0 +1,39 @@
+/* --- 1. Padrão da Página --- */
+.profile-page {
+  width: 100%;
+  max-width: 1100px; /* Largura padrão */
+  margin: 40px auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- 2. Título e Subtítulo (Padrão) --- */
+.profile-page h1 {
+  font-size: 36px; 
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+  text-align: left;
+}
+
+.profile-page p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 4px 0 32px 0; 
+  text-align: left;
+}
+
+/* --- 3. Grid dos Cards (CORRIGIDO) --- */
+.profile-grid {
+  display: grid;
+  
+  /* MUDANÇA: Força 2 colunas (1fr 1fr) 
+     em vez de 'auto-fit' 
+  */
+  grid-template-columns: 1fr 1fr;
+  
+  gap: 24px;
+  
+  /* Centraliza os cards dentro das colunas */
+  justify-items: center; 
+}

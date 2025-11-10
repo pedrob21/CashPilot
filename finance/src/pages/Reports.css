@@ -1,0 +1,43 @@
+/* --- 1. Padrão da Página --- */
+.reports-page {
+  width: 100%;
+  max-width: 1100px; /* Largura padrão */
+  margin: 40px auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* --- 2. Título e Subtítulo (CORRIGIDO) --- */
+.reports-page h1 {
+  /* Estilos que você tentou adicionar no final */
+  font-size: 48px; 
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+  text-align: left; 
+}
+
+.reports-page p {
+  /* Estilos que você tentou adicionar no final */
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0 0 32px 0; /* Espaço antes dos cards */
+  text-align: left; 
+}
+
+/* --- 3. Seção dos BigCards --- */
+.reports-page .BigCard {
+  margin-bottom: 24px; 
+}
+
+/* --- 4. Seção dos MiniCards ('.minis') --- */
+.reports-page .minis {
+  display: flex;
+  flex-wrap: wrap; /* Permite quebrar a linha em telas menores */
+  gap: 24px;
+}
+
+/* APAGUEI AS REGRAS ERRADAS DAQUI DE BAIXO 
+  (o .reports h1 e .reports p) 
+  PORQUE JÁ MOVEMOS ELAS PARA CIMA.
+*/

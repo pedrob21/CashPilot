@@ -1,0 +1,63 @@
+/* Importe este arquivo no seu Dashboard.tsx:
+   import './Dashboard.css'; 
+*/
+
+/* 1. Container Principal da Página */
+.dashboard {
+  /* Padrão de largura e centralização */
+  width: 100%;
+  max-width: 1100px; /* Mesma largura da página de transações */
+  margin: 40px auto; 
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+
+/* 2. Título e Subtítulo */
+.dashboard h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0 0 8px 0;
+  text-align: left; 
+}
+
+.dashboard p {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0 0 32px 0; /* Espaçamento antes dos cards */
+  text-align: left; 
+}
+
+/* 3. Layouts dos Cards */
+
+/* Container para os MiniCards */
+.dashboard .mini {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
+  justify-content: center; /* Centraliza os cards */
+  gap: 24px; /* Espaço entre os cards */
+  margin-bottom: 32px; /* Espaço antes da próxima seção */
+}
+
+/* Container para os Cards Regulares */
+.dashboard .regular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Também centraliza */
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+/* NOTA: 
+  Os componentes <MiniCard /> e <CardDash />
+  precisarão ter seu próprio estilo interno. 
+
+  Por exemplo, para o .mini funcionar bem, o CSS dentro de
+  MiniCard.css poderia ter algo como:
+
+  .mini-card {
+    flex-basis: 300px; // Largura base
+    flex-grow: 1;     // Cresce para preencher espaço
+    // ... resto do estilo do card
+  }
+*/
