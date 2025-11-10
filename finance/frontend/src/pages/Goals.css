@@ -72,3 +72,57 @@
   font-size: 18px;
   font-weight: 700;
 }
+
+/* --- 6. Grid cells / placeholder --- */
+.grid-cell {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-cell {
+  /* keeps spacing consistent when slot is empty */
+  min-height: 220px;
+}
+
+.card-cell {
+  width: 100%;
+}
+
+/* Placeholder button (big +) */
+.placeholder-cell .placeholder-btn {
+  width: 100%;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  border: 2px dashed #d1d5db;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 220ms ease, opacity 220ms ease;
+  color: #6b7280;
+  font-size: 40px;
+}
+
+.placeholder-cell .placeholder-btn:hover {
+  background: rgba(34,197,94,0.06);
+  border-color: #86efac;
+}
+
+/* animate placeholder to the right (disappear to the right) */
+.placeholder-cell .placeholder-btn.anim {
+  transform: translateX(120%);
+  opacity: 0;
+}
+
+/* new card appearance */
+.card-cell.added {
+  animation: cardFadeIn 260ms ease;
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
