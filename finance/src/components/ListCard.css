@@ -1,0 +1,190 @@
+/* --- Configuração Global e Variáveis --- */
+:root {
+    --cor-receita: #16a34a;
+    --cor-receita-fundo: #dcfce7;
+    --cor-despesa: #dc2626;
+    --cor-despesa-fundo: #fee2e2;
+    --cor-neutra-fundo: #eef2f6; /* Para outras categorias */
+    --cor-neutra-texto: #374151;
+    
+    --cor-texto-principal: #111827;
+    --cor-texto-secundario: #6b7280;
+    --cor-borda: #e5e7eb;
+    --cor-fundo-card: #ffffff;
+    --cor-fundo-pagina: #f9fafb;
+    --cor-verde-botao: #22c55e;
+}
+
+body {
+    /* É importante definir a fonte aqui para que o componente a herde */
+    font-family: 'Inter', sans-serif;
+    background-color: var(--cor-fundo-pagina);
+    color: var(--cor-texto-principal);
+    
+    /* Apenas para centralizar o card na página (opcional) */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px;
+    margin: 0;
+}
+
+/* --- Card Principal --- */
+.transaction-card {
+    width: 100%;
+    max-width: 900px;
+    background-color: var(--cor-fundo-card);
+    border-radius: 16px;
+    padding: 24px 32px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* --- Cabeçalho do Card --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--cor-borda);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+}
+
+.header-title h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.header-title p {
+    font-size: 16px;
+    color: var(--cor-texto-secundario);
+    margin: 4px 0 0;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* --- Botões --- */
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-filter {
+    background-color: var(--cor-fundo-card);
+    color: var(--cor-texto-principal);
+    border: 1px solid var(--cor-borda);
+}
+
+.btn-filter:hover {
+    background-color: #f9fafb;
+}
+
+.btn-filter svg path {
+    fill: var(--cor-texto-principal);
+}
+
+.btn-add {
+    background-color: var(--cor-verde-botao);
+    color: #ffffff;
+}
+
+.btn-add:hover {
+    background-color: #16a34a;
+}
+
+.btn-add span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* --- Lista de Transações (Tabela) --- */
+.transaction-list h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0 0 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; 
+}
+
+/* Cabeçalho da Tabela */
+thead th {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--cor-texto-secundario);
+    text-align: left;
+    padding-bottom: 12px;
+}
+
+/* Corpo e Linhas da Tabela */
+tbody tr {
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+tbody td {
+    padding: 16px 0; 
+    font-size: 15px;
+    color: var(--cor-texto-principal);
+    vertical-align: middle;
+}
+
+/* Célula de Categoria (Pílula) */
+.category-pill {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.pill-receita {
+    background-color: var(--cor-receita-fundo);
+    color: var(--cor-receita);
+}
+
+/* Classes para as despesas (como na imagem original) */
+.pill-alimentacao, 
+.pill-transporte, 
+.pill-moradia, 
+.pill-lazer {
+    background-color: var(--cor-neutra-fundo);
+    color: var(--cor-neutra-texto);
+}
+
+.pill-alimentacao {
+    background-color: #e6f5ea;
+    color: #347a46;
+}
+
+
+/* Célula de Valor */
+.value {
+    font-weight: 600;
+}
+
+.positive {
+    color: var(--cor-receita);
+}
+
+.negative {
+    color: var(--cor-despesa);
+}
+
+/* Alinhamento à Direita (para valor) */
+.align-right {
+    text-align: right;
+}

@@ -1,0 +1,87 @@
+/* --- 1. Estilo "Casco" (Aplicado a AMBOS) --- */
+.info-card,
+.prefs-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e5e7eb;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* --- 2. Cabeçalho (Compartilhado) --- */
+.settings-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e5e7eb; /* Linha divisória */
+}
+
+.icon-wrapper {
+  color: #16a34a; /* Cor verde do ícone */
+  margin-top: 2px;
+}
+
+.icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+.title-wrapper h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+.title-wrapper p {
+  font-size: 14px;
+  color: #6b7280;
+  margin: 4px 0 0 0;
+}
+
+/* --- 3. Conteúdo (Compartilhado) --- */
+.settings-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Espaço entre os itens (Nome, Email, etc) */
+}
+
+/* --- 4. Campos (Compartilhado) --- */
+.info-item label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6b7280;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Apenas o <p> do InfoCard */
+.info-card .info-item p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* Apenas o <select> do PrefsCard */
+.prefs-card .info-item select {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111827;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background-color: #ffffff;
+  
+  /* Seta do dropdown (opcional, mas fica igual à imagem) */
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%236b7280" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 12px 12px;
+}
